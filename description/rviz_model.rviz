@@ -8,6 +8,8 @@ Panels:
         - /Status1
         - /RobotModel1
         - /RobotModel1/Description Topic1
+        - /TF1
+        - /TF1/Frames1
         - /Map1
         - /Map1/Topic1
         - /LaserScan1
@@ -31,7 +33,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: ""
+    SyncSource: LaserScan
 Visualization Manager:
   Class: ""
   Displays:
@@ -70,6 +72,16 @@ Visualization Manager:
         Expand Joint Details: false
         Expand Link Details: false
         Expand Tree: false
+        F_left_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        F_right_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         Link Tree Style: Links in Alphabetic Order
         base_footprint:
           Alpha: 1
@@ -79,11 +91,6 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        caster_wheel:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         chassis:
           Alpha: 1
           Show Axes: false
@@ -99,7 +106,17 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        left_wheel_steer:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         right_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_wheel_steer:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -116,39 +133,52 @@ Visualization Manager:
       Enabled: true
       Frame Timeout: 15
       Frames:
-        All Enabled: true
+        All Enabled: false
+        F_left_wheel:
+          Value: false
+        F_right_wheel:
+          Value: false
         base_footprint:
           Value: true
         base_link:
-          Value: true
-        caster_wheel:
-          Value: true
+          Value: false
         chassis:
-          Value: true
+          Value: false
         laser_frame:
-          Value: true
+          Value: false
         left_wheel:
-          Value: true
+          Value: false
+        left_wheel_steer:
+          Value: false
+        odom:
+          Value: false
         right_wheel:
-          Value: true
+          Value: false
+        right_wheel_steer:
+          Value: false
       Marker Scale: 1
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: false
       Tree:
-        base_link:
-          base_footprint:
-            {}
-          chassis:
-            caster_wheel:
+        odom:
+          base_link:
+            base_footprint:
               {}
-            laser_frame:
+            chassis:
+              laser_frame:
+                {}
+              left_wheel_steer:
+                F_left_wheel:
+                  {}
+              right_wheel_steer:
+                F_right_wheel:
+                  {}
+            left_wheel:
               {}
-          left_wheel:
-            {}
-          right_wheel:
-            {}
+            right_wheel:
+              {}
       Update Interval: 0
       Value: true
     - Alpha: 0.699999988079071
@@ -252,25 +282,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 1.7247426509857178
+      Distance: 1.113599419593811
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0
-        Y: 0
-        Z: 0
+        X: 0.044720958918333054
+        Y: 0.0454852320253849
+        Z: -0.03414570912718773
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.39979809522628784
+      Pitch: 0.42479798197746277
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.7672135829925537
+      Yaw: 1.9672189950942993
     Saved: ~
 Window Geometry:
   Displays:
