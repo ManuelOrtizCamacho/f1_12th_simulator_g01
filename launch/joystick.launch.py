@@ -21,10 +21,12 @@ def generate_launch_description():
                     parameters=[joy_params],
     )
 
-    teleop_node = Node(package='teleop_twist_joy', 
+# add the remappings argument for the cmd_vel topic
+    teleop_node = Node(package='teleop_twist_joy',
                     executable='teleop_node',
                     name="teleop_node",
                     parameters=[joy_params],
+                    remappings=[('/cmd_vel','/cmd_vel_joy')]
     )
 
 
