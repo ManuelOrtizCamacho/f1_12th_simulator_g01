@@ -38,7 +38,7 @@
         <collision>
             <origin xyz="0.15 0 0.075"/>
             <geometry>
-                <box size="0.3 0.3 0.15"/>
+                <box size="0.3 0.2 0.15"/>
             </geometry>
         </collision>
         <xacro:inertial_box mass="0.5" x="0.3" y="0.3" z="0.15">
@@ -67,7 +67,7 @@
         </visual>
         <collision>
             <geometry>
-                <cylinder radius="0.035" length="0.04"/>
+                <sphere radius="0.035"/>
             </geometry>
         </collision>
         <xacro:inertial_cylinder mass="0.1" length="0.04" radius="0.035">
@@ -96,7 +96,7 @@
         </visual>
         <collision>
             <geometry>
-                <cylinder radius="0.035" length="0.04"/>
+                <sphere radius="0.035"/>
             </geometry>
         </collision>
         <xacro:inertial_cylinder mass="0.1" length="0.04" radius="0.035">
@@ -126,7 +126,7 @@
         </visual>
         <collision>
             <geometry>
-                <cylinder radius="0.001" length="0.001"/>
+                <sphere radius="0.001"/>
             </geometry>
         </collision>
         <xacro:inertial_cylinder mass="0.001" length="0.001" radius="0.001">
@@ -155,7 +155,7 @@
         </visual>
         <collision>
             <geometry>
-                <cylinder radius="0.035" length="0.04"/>
+                <sphere radius="0.035"/>
             </geometry>
         </collision>
         <xacro:inertial_cylinder mass="0.1" length="0.04" radius="0.035">
@@ -185,7 +185,7 @@
         </visual>
         <collision>
             <geometry>
-                <cylinder radius="0.001" length="0.001"/>
+                <sphere radius="0.001"/>
             </geometry>
         </collision>
         <xacro:inertial_cylinder mass="0.001" length="0.001" radius="0.001">
@@ -214,7 +214,7 @@
         </visual>
         <collision>
             <geometry>
-                <cylinder radius="0.035" length="0.04"/>
+                <sphere radius="0.035"/>
             </geometry>
         </collision>
         <xacro:inertial_cylinder mass="0.1" length="0.04" radius="0.035">
